@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chest X-ray Detection | Upload</title>
+
+
+    <style type="text/css">
+        input[type="file"]{
+    display: none;
+}
+.custom-file-upload {
+    color: black;
+    border: 1px solid #757575;
+    background-color: #ebebeb;
+    border-radius: 5px;
+    padding: 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+    </style>
+
+</head>
+
+<body>
+    <div class="page-wrapper">
+
+        <section class="prevention-one prevention-one__prevention-page">
+            <div class="container">
+                <div class="block-title text-center">
+                    <h3>Upload Image </h3>
+                    <br>
+                </div>
+
+                
+                <div class="row">
+                    <div class="col-lg-6" style="padding-left: 100px;">
+                        <div class="card" style="width: 25rem;">
+                        <p class="card-title">Chest X-Ray</p>
+                        <div class="card-body">
+                        
+                        <p class="card-text"></p>
+                        
+                        <div class="text-center">
+                        <form action = "/uploaded_chest" method = "post" enctype="multipart/form-data">  
+                        <label for="file-upload_1" id="label_1" class="custom-file-upload btn btn-primary" style="margin-top: 8px; margin-right: 10px;">
+                        Select Image
+                        </label>
+                        <input type="file" name="file" id="file-upload_1" onchange="showname()"/>  
+                        <input type = "submit" value="Upload" class="btn btn-success">  
+                        </form>
+                        </div>  
+
+                        </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script type="text/javascript">
+        
+    function showname () {
+      var name_1 = document.getElementById('file-upload_1'); 
+      document.getElementById('label_1').innerHTML = name_1.files.item(0).name; 
+    };
+    </script>
+    
+</body>
+
+</html>
