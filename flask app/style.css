@@ -1,0 +1,82 @@
+
+input[type="file"]{
+  display: none;
+}
+
+body{
+  background-image: url('ui_images/background.jpg');
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-family: cursive;
+  color: blue;
+}
+
+p{
+  font-family: cursive;
+}
+.btn{
+  font-size: 16px;
+  border: 2px solid #000;
+  border-radius: 5px;
+  font-family: cursive;
+  letter-spacing: 1px;
+  margin: 20px;
+  padding: 15px 25px;
+  min-width: 10px;
+  cursor: pointer;
+  background: transparent;
+  background-size: 200%;
+  transition: 0.5s;
+}
+.btn:hover{
+  background-position: right;
+  color: #fff;
+  background-image: linear-gradient(to right, transparent 50%, #10b9e4 100%);
+}
+
+.illustration{
+  margin-left: 550px;
+  width: 350px;
+  height: 350px;
+  position: absolute;
+}
+
+.page-wrapper {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.card-img-top {
+  margin-right: 10px;
+}
+
+.container{
+  display: inline-block;
+}
+
+.text{
+  border-right: 3px solid;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: 
+    typing 4s steps(32),
+    blink-caret .5s step-end infinite,
+    cursor .4s step-end infinite alternate;
+}
+
+
+/* cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black }
+}
+
+@keyframes typing{
+  from {width:0}
+}
+
