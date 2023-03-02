@@ -13,11 +13,11 @@
 
     </style>
 
+
 </head>
 
 <body>
     <div class="page-wrapper">
-
         <section class="prevention-one prevention-one__prevention-page">
             <div>
                 <div>
@@ -51,18 +51,24 @@
                         </div>
                         
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </section>
-    </div>
-    
-    <script type="text/javascript">
-        
-    function showname () {
-      var name_1 = document.getElementById('file-upload_1'); 
-      document.getElementById('label_1').innerHTML = name_1.files.item(0).name; 
-    };
-    </script>
+      </div>
+      
+      <script>
+        function showPreview() {
+          var reader = new FileReader();
+          reader.onload = function (e) {
+            document.getElementById("image-preview").src = e.target.result;
+            document.getElementById("file-name").textContent = document.getElementById("file-upload_1").files[0].name;
+          };
+          reader.readAsDataURL(document.getElementById("file-upload_1").files[0]);
+        }
+      </script>
     
 </body>
 
