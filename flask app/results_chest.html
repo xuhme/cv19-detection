@@ -67,9 +67,15 @@ body{
                     <br>
                     <p class="card-title" style="text-align: center; padding-top: 10px;padding-bottom: 10px;color:white; background-color:#26a3f7; font-weight: 600;">Xception Prediction Result</p>
                     <div class="card-body" style="padding-top: 0px;margin-top: -20px;">
-                        <div class="about-three__title"">
-                            <p style="text-align: center;color: black;font-size: 23px; background-color: white;">{{ xception_chest_pred }}<p>
-                        </div>
+                        <div class="about-three__title">
+                            {% if 'Negative' in xception_chest_pred %}
+                              <p style="text-align: center; font-size: 23px; background-color: white; color: green;">{{ xception_chest_pred }}</p>
+                            {% elif 'Positive' in xception_chest_pred %}
+                              <p style="text-align: center; font-size: 23px; background-color: white; color: red;">{{ xception_chest_pred }}</p>
+                            {% else %}
+                              <p style="text-align: center; font-size: 23px; background-color: white; color: black;">{{ xception_chest_pred }}</p>
+                            {% endif %}
+                          </div>
                     </div>
                     </div>
                     </div>
